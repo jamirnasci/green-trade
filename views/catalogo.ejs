@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Plantas - GreenTrade</title>
+    <link rel="stylesheet" href="/css/catalogo.css">
+    <link rel="stylesheet" href="/css/nav.css">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="container">
+        <section>
+            <h1>Explore Nossas Plantas</h1>
+            <div class="grid">
+                <% if(plantas.length > 0) { %>
+                <% plantas.forEach((planta, i) => { %>
+                    <div class="card">
+                        <img style="width: 300px; height: 200px;" src="<%= planta.imagem %>" alt="Nome da Planta">
+                        <h2><%= planta.planta_nome %></h2>
+                        <p><%= planta.descricao %></p>
+                        <p>Proprietário: <b><%= planta.usuario_nome%></b></p>
+                        <input type="button" class="cta" onclick="detalhesPlanta(<%= planta.planta_id%>)" value="Trocar">
+                    </div>
+                <% }) %>
+                <% } else { %>
+                    <h1>Não há plantas para mostrar</h1>
+                <% } %>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 GreenTrade. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="/js/catalogo.js"></script>
+</html>

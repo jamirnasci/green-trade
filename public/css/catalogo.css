@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+nav {
+    margin: 10px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    margin-top: 0;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    transition: 0.3s;
+    max-width: 400px;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+.card p {
+    font-size: 1em;
+    color: #666;
+    text-align: justify;
+}
+.cta {
+    background-color: darkcyan;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    width: 90%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: darkcyan;
+    color: white;
+}
+#removerBtn{
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    width: 90%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}

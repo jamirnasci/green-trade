@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Plantas - GreenTrade</title>
+    <link rel="stylesheet" href="/css/catalogo.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="container">
+        <section>
+            <h1>Suas plantas</h1>
+            <div class="grid">
+                <% if(plantas.length > 0) { %>
+                <% plantas.forEach((planta, i) => { %>
+                    <div class="card">
+                        <img style="width: 300px; height: 200px;" src="<%= planta.imagem %>" alt="Nome da Planta">
+                        <h2><%= planta.nome %></h2>
+                        <p><%= planta.descricao %></p>
+                        <p>Idade: <b><%= planta.idade%> Anos</b></p>
+                        <p>Tipo: <b><%= planta.tipo%></b></p>
+                        <input type="button" value="Remover" id="removerBtn" onclick="removerPlanta(<%= planta.id%>)">
+                    </div>
+                <% }) %>
+                <% } else { %>
+                    <h1>Não há plantas para mostrar</h1>
+                <% } %>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 GreenTrade. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="/js/minhasPlantas.js"></script>
+</html>

@@ -1,0 +1,11 @@
+header {
+    background-color: darkcyan;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}

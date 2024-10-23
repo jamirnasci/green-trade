@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Planta - <%= planta.nome %></title>
+    <link rel="stylesheet" href="/css/nav.css"> <!-- Link para seu CSS -->
+    <link rel="stylesheet" href="/css/detalhesPlanta.css">
+</head>
+<body>
+    <%- include('nav') %>
+    <div class="detalhes-container">
+        <h1><%= planta.nome %></h1>
+        <img src="/<%= planta.imagem %>" alt="<%= planta.nome %>">
+        <p><strong>Idade:</strong> <%= planta.idade %> anos</p>
+        <p><strong>Condição:</strong> <%= planta.condicao %></p>
+        <p><strong>Tamanho:</strong> <%= planta.tamanho %></p>
+        <p><strong>Tipo:</strong> <%= planta.tipo %></p>
+        <p><strong>Descrição:</strong> <%= planta.descricao %></p>
+        <a id="emailBtn" href="mailto:<%= planta.email%>?Subject=Olá,%20tenho%20interesse%20na%20<%=planta.nome%>,%20podemos%20conversar?" target="_top">Enviar e-mail 📧</a>
+    </div>
+</body>
+</html>
